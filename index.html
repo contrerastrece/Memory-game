@@ -8,11 +8,13 @@
   <title>Memory game</title>
 </head>
 <body>
-  <header class="header">
-    <h1>POKE MEMORY GAME</h1>
-  </header>
-
   <main class="main">
+    <div class="container-score">
+      <div class="fails" >Fails: <span id="fails">0</span> </div>          
+      <div class="points" >Points: <span id="points">0</span> </div> 
+      <div class="bonus" >Bonus: <span id="bonus">X1</span> </div>      
+    </div>
+
     <div class="game-container">
       <template id="template">
         <div class="card" data-id="" data-pokewin="false">
@@ -21,8 +23,9 @@
           </div>
           <div class="card__back"></div>
         </div>
-      </template>      
+      </template>
     </div>
+         
   </main>
 
   <script src="js/app.js"></script>

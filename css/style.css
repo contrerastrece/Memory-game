@@ -17,20 +17,28 @@ body {
   background-color: #333;
   font-family: sans-serif;
   text-align: center;
+  color:var(--yellow);
 }
 
 .main {
-  display: flex;
+  display: grid;
   justify-content: center;
+  grid-template-rows: 1fr 9fr;
 }
 
+.container-score{
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
 .game-container {
   background-color: var(--blue-dark);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  width: 720px;
-  padding: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  width: 53rem;
+  padding: 0.5rem;
 }
 
 .card {
