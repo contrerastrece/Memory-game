@@ -14,31 +14,59 @@
 }
 
 body {
-  background-color: #333;
-  font-family: sans-serif;
+background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  
+
+  /* background-image: url("../assets/backgroundPok.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; */
   text-align: center;
   color:var(--yellow);
+  
+  font-family: sans-serif;
 }
 
 .main {
   display: grid;
   justify-content: center;
   grid-template-rows: 1fr 9fr;
+  grid-template-columns: 2fr 9fr;
+  gap:1rem;
 }
 
-.container-score{
-  grid-row: 1;
+.score-container{
+  grid-column: 2/3;
+  grid-row: 1/2;
   display: flex;
   align-items: center;
   justify-content:space-around;
 }
+.scoreBoard{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: rgba(255,255,255,0.05);
+  box-shadow: 0 15px 32px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 0.5rem;
+}
 .game-container {
-  background-color: var(--blue-dark);
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: rgba(255,255,255,0.05);
+  box-shadow: 0 15px 32px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 0.5rem;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 0.5rem;
-  width: 53rem;
-  padding: 0.5rem;
+  width: 64.5rem;
+  padding: 1rem;
 }
 
 .card {

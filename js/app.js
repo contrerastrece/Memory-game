@@ -1,3 +1,6 @@
+import  './scoreBoard.js'
+import { drawScoreBoard } from './scoreBoard.js';
+
 const showAllCards = (allCards) => {
   allCards.forEach((card) => {
     card.classList.add("card-show");
@@ -35,13 +38,15 @@ const drawCards = (allCards) => {
   setTimeout(() => {
     hideAllCards($allCards);
   }, 4000);
+
+  drawScoreBoard();
 };
 
 const getRandomNumber = (max = 150) => Math.floor(Math.random() * max + 1);
 
 const generatePokeCards = () => {
   const currentCards = [];
-  while (currentCards.length < 6) {
+  while (currentCards.length < 9) {
     let number = getRandomNumber();
 
     if (currentCards.includes(number)) {
@@ -58,7 +63,7 @@ const generatePokeCards = () => {
   // desordenar los elementos del array
   // allCards.sort(()=>Math.random() - 0.5)
 
-  currentCards.length < 6 ? generatePokeCards() : drawCards(allCards);
+  currentCards.length < 9 ? generatePokeCards() : drawCards(allCards);
   console.log(allCards);
 };
 generatePokeCards();

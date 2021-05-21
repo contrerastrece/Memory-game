@@ -9,10 +9,17 @@
 </head>
 <body>
   <main class="main">
-    <div class="container-score">
+    <div class="level">
+      <h3>Level: Hard</h3>
+    </div>
+    <div class="score-container">
       <div class="fails" >Fails: <span id="fails">0</span> </div>          
       <div class="points" >Points: <span id="points">0</span> </div> 
       <div class="bonus" >Bonus: <span id="bonus">X1</span> </div>      
+    </div>
+    
+    <div class="scoreBoard" id="scoreBoard">
+      <h2>Rankings</h2>
     </div>
 
     <div class="game-container">
@@ -26,8 +33,9 @@
       </template>
     </div>
          
+   
   </main>
 
-  <script src="js/app.js"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
