@@ -17,12 +17,7 @@ export  const drawScoreBoard = () => {
     $p.textContent=`${data.name} - ${data.points}`
     $fragment.appendChild($p)
   })
-
-  // for (const data in dataPoints) {
-  //   const $p=document.createElement("p");
-  //   $p.textContent=`${data.name}-${data.points}`
-  //   $fragment.appendChild($p)
-  // }
+  
 $scoreBoard.appendChild($fragment)
 };
 console.log(dataPoints)
